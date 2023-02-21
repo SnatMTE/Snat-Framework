@@ -19,6 +19,8 @@ require_once 'snat_framework.php';
 
 # Image functions #
 * snat_framework_create_thumbnail($source_image_path, $output_image_path, $thumbnail_width, $thumbnail_height): Create a thumbnail image from a source image.
+* snat_framework_resize_image($source_image_path, $output_image_path, $new_width, $new_height): Resize an image to a specified width and height.
+* snat_framework_crop_image($source_image_path, $output_image_path, $crop_width, $crop_height, $start_x, $start_y): Crop an image to a specified width, height, and starting point.
 * snat_framework_rotate_image($source_image_path, $output_image_path, $degrees): Rotate an image by a specified number of degrees.
 * snat_framework_convert_image($source_image_path, $output_image_path, $output_type): Convert an image to a different file format.
 
