@@ -1,5 +1,5 @@
 # Snat's Framework
-Everything here is complied together from websites I have created and re-use for many projects I do. Snat's Framework is a PHP framework that provides commonly used functions for web development.
+Everything here is complied together from websites I have created and re-use for many projects I do. Snat's Framework is a PHP framework that provides commonly used functions for web development. My future WordPress plugins will start to use this framework when required so I will be updating this with more and more random things that I can think off!
 
 Installation
 
