@@ -7,23 +7,8 @@ To use Snat's Framework, simply include the framework file in your PHP project:
 
 require_once 'snat_framework.php';
 
-# Database functions #
-* snat_framework_connect_to_database($host, $username, $password, $database_type): Connect to a database.
-* snat_framework_query($connection, $sql): Execute a SQL query and return the result.
-* snat_framework_get_last_insert_id($connection): Get the ID of the last inserted row.
-* snat_framework_escape_string($connection, $string): Escape a string for use in a SQL query.
+You may, or may not, find this framework useful and I will be updating it quite a lot over the next few months. Expect it to be buggy, possibly insecure or outright not working. I am developing my own framework for the websites I create and each file will be updated as I go. 
 
-# User authentication functions #
-* snat_framework_register_user($connection, $username, $password): Register a new user.
-* snat_framework_login($connection, $username, $password): Log in a user.
+So I will say this once.
 
-# Image functions #
-* snat_framework_create_thumbnail($source_image_path, $output_image_path, $thumbnail_width, $thumbnail_height): Create a thumbnail image from a source image.
-* snat_framework_resize_image($source_image_path, $output_image_path, $new_width, $new_height): Resize an image to a specified width and height.
-* snat_framework_crop_image($source_image_path, $output_image_path, $crop_width, $crop_height, $start_x, $start_y): Crop an image to a specified width, height, and starting point.
-* snat_framework_rotate_image($source_image_path, $output_image_path, $degrees): Rotate an image by a specified number of degrees.
-* snat_framework_convert_image($source_image_path, $output_image_path, $output_type): Convert an image to a different file format.
-
-# Audio functions #
-* snat_framework_get_duration($audio_file_path): Get the duration of an audio file.
-* snat_framework_get_bitrate($audio_file_path): Get the bitrate of an audio file.
+# DO NOT USE ON A PRODUCTION SERVER #
