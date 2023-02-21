@@ -7,7 +7,7 @@ To use Snat's Framework, simply include the framework file in your PHP project:
 
 require_once 'snat_framework.php';
 
-You may, or may not, find this framework useful and I will be updating it quite a lot over the next few months. Expect it to be buggy, possibly insecure or outright not working. I am developing my own framework for the websites I create and each file will be updated as I go. 
+I am creating this framework to migate all of the websites I have developed to the same code base. This framework is in development and will be finished one day but you might find it useful. I am not expecting a single person to use it nor wanting to use it. This is purely for my own learning, organising and development. Don't expect this to work at this time, it will be a long while until then!
 
 So I will say this once.
 
