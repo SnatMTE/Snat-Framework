@@ -1,7 +1,7 @@
 <?php
 /**
  * Snat's Framework - Snat's PHP framework of commonly used functions.
- * This part is for for user stuff.
+ * This part is for user stuff.
  * 
  * @link      https://snat.co.uk/
  * @author    Snat
