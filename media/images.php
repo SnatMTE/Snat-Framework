@@ -245,12 +245,23 @@ function snat_framework_apply_filter($src_path, $dst_path, $filter_name) {
     imagedestroy($src_image);
   }
 
-function snat_framework_get_gravatar_url($email, $size = 80, $default = 'mp', $rating = 'g') {
+  function snat_framework_get_gravatar_url($email, $size = 80, $default = 'mp', $rating = 'g', $force_default = false, $force_https = false, $use_gravatar_domain = false) {
     // Hash the email address using MD5.
     $hashed_email = md5(strtolower(trim($email)));
 
     // Construct the URL for the Gravatar image.
-    $url = "https://www.gravatar.com/avatar/{$hashed_email}?s={$size}&d={$default}&r={$rating}";
+    $url = ($use_gravatar_domain ? 'https://gravatar.com' : 'https://www.gravatar.com') . '/avatar/' . $hashed_email . '?s=' . $size . '&d=' . $default . '&r=' . $rating;
+
+    // Add the additional parameters for profile features
+    if ($force_default) {
+        $url .= '&f=y';
+    }
+    if ($force_https) {
+        $url .= '&secure=true';
+    }
+    if ($rating != 'g') {
+        $url .= '&rating=' . $rating;
+    }
 
     return $url;
 }
