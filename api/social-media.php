@@ -9,14 +9,33 @@
  * @license   https://opensource.org/licenses/MIT MIT License
 */
 
+// Ensure Composer's autoloader is included
+require_once __DIR__ . '/vendor/autoload.php';
+
+/**
+ * Posts a tweet to Twitter using the provided credentials and status message.
+ *
+ * @param string $consumer_key Twitter API consumer key.
+ * @param string $consumer_secret Twitter API consumer secret.
+ * @param string $access_token Twitter API access token.
+ * @param string $access_token_secret Twitter API access token secret.
+ * @param string $status The status message to post as a tweet.
+ * @return bool Returns true on success, false on failure.
+ */
+
 function snat_framework_post_tweet($consumer_key, $consumer_secret, $access_token, $access_token_secret, $status) {
     require_once('TwitterOAuth/autoload.php');
 
-    $connection = new Abraham\TwitterOAuth\TwitterOAuth($consumer_key, $consumer_secret, $access_token, $access_token_secret);
-    $post = $connection->post('statuses/update', array('status' => $status));
-
+    // Optionally log the response for debugging
     if ($connection->getLastHttpCode() == 200) {
+        // Success, you can log $post if needed
+        // error_log(print_r($post, true));
         return true;
+    } else {
+        // Log error response for debugging
+        error_log('Twitter API error: ' . print_r($post, true));
+        return false;
+    }
     } else {
         return false;
     }
