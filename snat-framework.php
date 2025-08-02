@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Snat's Framework - Snat's PHP framework of commonly used functions.
  * This makes all the magic happen.
  * 
